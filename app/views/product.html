@@ -1,0 +1,8 @@
+
+<h2>{{ product.infoProduct.title }}</h2>
+
+<div>{{ product.infoProduct.description }}</div>
+<strong>{{ product.infoProduct.price.data.formatted.without_tax}}</strong>
+
+<button ng-if="!product.addStatus" ng-click="product.addCart()">Comprar</button>
+<button ng-if="product.addStatus" class="btn btn-warning" ng-click="product.addCart()">{{ product.addStatus }}</button>
