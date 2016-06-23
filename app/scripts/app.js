@@ -35,7 +35,7 @@ angular
         controller: 'StoreCtrl',
         controllerAs: 'store',
         resolve:{
-          categories: function(){
+          categories: function($q, MoltinAuth){
             var deferred = $q.defer();
             $q.when(MoltinAuth).then(function(moltin){
               moltin.Category.List(null, function(categories){

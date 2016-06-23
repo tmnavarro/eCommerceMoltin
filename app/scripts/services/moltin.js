@@ -8,7 +8,7 @@
  * Factory in the ecommerceMoltinApp.
  */
 angular.module('ecommerceMoltinApp.moltin', [])
-  .factory('MoltinAuth', function () {
+  .factory('MoltinAuth', function ($q) {
     //Inicializa uma nova promise
     var deferred = $q.defer();
 
